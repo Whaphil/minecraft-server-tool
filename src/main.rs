@@ -1,6 +1,7 @@
 use clap::Parser;
 
 mod server_starter;
+mod version;
 
 #[derive(Parser, Debug)]
 struct Cli {
