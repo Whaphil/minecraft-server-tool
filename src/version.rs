@@ -3,22 +3,22 @@ use std::fs;
 
 #[derive(Serialize, Deserialize)]
 pub struct Version {
-    name: String,
-    path_to_forge_file: String,
-    current_mods: Vec<Mod>,
-    mod_packs: Vec<Modpack>,
+    pub name: String,
+    pub path_to_forge_file: String,
+    pub current_mods: Vec<Mod>,
+    pub mod_packs: Vec<Modpack>,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Modpack {
-    name: String,
-    mods: Vec<Mod>,
+    pub name: String,
+    pub mods: Vec<Mod>,
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Mod {
-    name: String,
-    path_to_mod: String,
+    pub name: String,
+    pub path_to_mod: String,
 }
 
 fn read_json_from_file<T: DeserializeOwned>(path_to_file: String) -> Option<T> {

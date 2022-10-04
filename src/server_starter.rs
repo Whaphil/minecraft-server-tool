@@ -1,6 +1,5 @@
-use std::process::{Command, Output};
-
 use std::env;
+use std::process::{Command, Output};
 
 fn parse_output(output: Output) -> String {
     match output.status.code() {
